@@ -137,3 +137,53 @@ if (inputSearch) {
     });
 
 }
+const searchPengunjung = document.getElementById("searchpengunjung");
+
+if (searchPengunjung) {
+    searchPengunjung.addEventListener("keyup", function () {
+
+        let keyword = this.value.toLowerCase();
+        let rows = document.querySelectorAll("#tabelpengunjung tr");
+
+        rows.forEach(function (row) {
+            let text = row.innerText.toLowerCase();
+
+            if (text.indexOf(keyword) > -1) {
+                row.style.display = "";
+            } else {
+                row.style.display = "none";
+            }
+        });
+
+    });
+}
+document.querySelectorAll("#tabelpengunjung .btn-danger").forEach(btn => {
+
+    btn.addEventListener("click", function () {
+
+        Swal.fire({
+            title: "Hapus Pengunjung?",
+            text: "Data pengunjung akan dihapus.",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Ya, Hapus",
+            cancelButtonText: "Batal"
+        }).then((result) => {
+
+            if(result.isConfirmed){
+
+                this.closest("tr").remove();
+
+                Swal.fire(
+                    "Berhasil!",
+                    "Data pengunjung berhasil dihapus.",
+                    "success"
+                );
+
+            }
+
+        });
+
+    });
+
+});
