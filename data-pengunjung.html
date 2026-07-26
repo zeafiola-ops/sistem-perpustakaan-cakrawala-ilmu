@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Buku - Perpustakaan Cakrawala Ilmu</title>
-
+    <title>Data Pengunjung - Perpustakaan Cakrawala Ilmu</title>
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -77,7 +76,7 @@
 
         <div class="container-fluid">
 
-         <h4 class="mb-0">Data Buku</h4>
+         <h4 class="mb-0">Data Pengunjung</h4>
             <div class="d-flex align-items-center">
 
                 <span id="jam" class="me-4 fw-bold"></span>
@@ -99,11 +98,11 @@
         </div>
 
     </nav>
-<h2 class="mt-4">Data Buku</h2>
+<h2 class="mt-4">Data Pengunjung</h2>
 
 <p class="text-muted">
-    Halaman ini digunakan untuk mengelola data buku perpustakaan.
-    Admin dapat menambah, mengubah, menghapus, dan mencari data buku.
+Halaman ini digunakan untuk mengelola data pengunjung perpustakaan.
+Admin dapat menambah, mengubah, menghapus, dan mencari data pengunjung.
 </p>
 <hr>
     <div class="row mb-4">
@@ -112,8 +111,8 @@
         <div class="card shadow border-0 text-center">
             <div class="card-body">
                 <i class="fa-solid fa-book fa-2x text-primary mb-2"></i>
-                <h6>Total Buku</h6>
-                <h3>500</h3>
+                <h6>Total pengunjung</h6>
+                <h3>400</h3>
             </div>
         </div>
     </div>
@@ -122,8 +121,8 @@
         <div class="card shadow border-0 text-center">
             <div class="card-body">
                 <i class="fa-solid fa-layer-group fa-2x text-success mb-2"></i>
-                <h6>Total Kategori</h6>
-                <h3>25</h3>
+                <h6>laki laki</h6>
+                <h3>210</h3>
             </div>
         </div>
     </div>
@@ -132,8 +131,8 @@
         <div class="card shadow border-0 text-center">
             <div class="card-body">
                 <i class="fa-solid fa-book-open-reader fa-2x text-warning mb-2"></i>
-                <h6>Buku Dipinjam</h6>
-                <h3>98</h3>
+                <h6>perempuan</h6>
+                <h3>190</h3>
             </div>
         </div>
     </div>
@@ -142,8 +141,8 @@
         <div class="card shadow border-0 text-center">
             <div class="card-body">
                 <i class="fa-solid fa-circle-check fa-2x text-info mb-2"></i>
-                <h6>Buku Tersedia</h6>
-                <h3>402</h3>
+                <h6>Hari Ini</h6>
+                <h3>0</h3>
             </div>
         </div>
     </div>
@@ -155,15 +154,15 @@
 
         <h5 class="mb-0">
             <i class="fa-solid fa-book"></i>
-            Data Buku
+            Data Pengunjung
         </h5>
 
         <button
 class="btn btn-primary"
 data-bs-toggle="modal"
-data-bs-target="#modalTambahBuku">
+data-bs-target="#modalTambahpengunjung">
             <i class="fa-solid fa-plus"></i>
-            Tambah Buku
+            Tambah Pengunjung
         </button>
 
     </div>
@@ -177,8 +176,8 @@ data-bs-target="#modalTambahBuku">
                 <input
 type="text"
 class="form-control"
-id="searchBuku"
-placeholder="🔍 Cari Judul Buku...">
+id="searchpengunjung"
+placeholder="🔍 Cari Nama Pengunjung...">
             </div>
 
         </div>
@@ -192,116 +191,229 @@ placeholder="🔍 Cari Judul Buku...">
 
                     <tr>
                         <th>No</th>
-                        <th>Kode</th>
-                        <th>Judul Buku</th>
-                        <th>Kategori</th>
-                        <th>Penulis</th>
-                        <th>Status</th>
+                        <th>Id Pengunjung</th>
+                        <th>Nama Pengunjung</th>
+                        <th>Jenis Kelamin</th>
+                        <th>No HP</th>
+                        <th>tanggal kunjungan</th>
                         <th>Aksi</th>
                     </tr>
 
                 </thead>
 
-                <tbody id="tabelBuku">
+                <tbody id="tabelpengunjung">
                     <tr>
-<td>1</td><td>BK001</td><td>Pemrograman Python Dasar</td><td>Pemrograman</td><td>Andi Wijaya</td><td>2024</td><td><span class="badge bg-success">Tersedia</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
-</tr>
+<tr><td>1</td><td>PG001</td><td>Andi Saputra</td><td>Laki-laki</td><td>081234567801</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
 
-<tr>
-<td>2</td><td>BK002</td><td>Basis Data MySQL</td><td>Basis Data</td><td>Budi Santoso</td><td>2023</td><td><span class="badge bg-danger">Dipinjam</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
-</tr>
+<tr><td>2</td><td>PG002</td><td>Budi Santoso</td><td>Laki-laki</td><td>081234567802</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
 
-<tr>
-<td>3</td><td>BK003</td><td>Machine Learning</td><td>Machine Learning</td><td>Dewi Lestari</td><td>2024</td><td><span class="badge bg-success">Tersedia</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
-</tr>
+<tr><td>3</td><td>PG003</td><td>Dedi Kurniawan</td><td>Laki-laki</td><td>081234567803</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr><tr><td>11</td><td>PG011</td><td>Lukman Hakim</td><td>Laki-laki</td><td>081234567811</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>12</td><td>PG012</td><td>Muhammad Rizki</td><td>Laki-laki</td><td>081234567812</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>13</td><td>PG013</td><td>Nanda Pratama</td><td>Laki-laki</td><td>081234567813</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>14</td><td>PG014</td><td>Oki Setiawan</td><td>Laki-laki</td><td>081234567814</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>15</td><td>PG015</td><td>Putra Ramadhan</td><td>Laki-laki</td><td>081234567815</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>16</td><td>PG016</td><td>Qomarudin</td><td>Laki-laki</td><td>081234567816</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>17</td><td>PG017</td><td>Rizky Maulana</td><td>Laki-laki</td><td>081234567817</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>18</td><td>PG018</td><td>Saputra Hidayat</td><td>Laki-laki</td><td>081234567818</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>19</td><td>PG019</td><td>Teguh Prakoso</td><td>Laki-laki</td><td>081234567819</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>20</td><td>PG020</td><td>Umar Faruq</td><td>Laki-laki</td><td>081234567820</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>21</td><td>PG021</td><td>Vino Saputra</td><td>Laki-laki</td><td>081234567821</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>22</td><td>PG022</td><td>Wahyu Nugroho</td><td>Laki-laki</td><td>081234567822</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>23</td><td>PG023</td><td>Yogi Pratama</td><td>Laki-laki</td><td>081234567823</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>24</td><td>PG024</td><td>Zaki Ramadhan</td><td>Laki-laki</td><td>081234567824</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>25</td><td>PG025</td><td>Agus Setiawan</td><td>Laki-laki</td><td>081234567825</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>26</td><td>PG026</td><td>Bayu Firmansyah</td><td>Laki-laki</td><td>081234567826</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>27</td><td>PG027</td><td>Candra Wijaya</td><td>Laki-laki</td><td>081234567827</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>28</td><td>PG028</td><td>Dimas Prasetyo</td><td>Laki-laki</td><td>081234567828</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>29</td><td>PG029</td><td>Ega Saputra</td><td>Laki-laki</td><td>081234567829</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>30</td><td>PG030</td><td>Fikri Hidayat</td><td>Laki-laki</td><td>081234567830</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr><tr><td>31</td><td>PG031</td><td>Guntur Prakoso</td><td>Laki-laki</td><td>081234567831</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>32</td><td>PG032</td><td>Hafiz Maulana</td><td>Laki-laki</td><td>081234567832</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>33</td><td>PG033</td><td>Iqbal Firmansyah</td><td>Laki-laki</td><td>081234567833</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>34</td><td>PG034</td><td>Jefri Saputra</td><td>Laki-laki</td><td>081234567834</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>35</td><td>PG035</td><td>Khoirul Anam</td><td>Laki-laki</td><td>081234567835</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>36</td><td>PG036</td><td>Lutfi Ramadhan</td><td>Laki-laki</td><td>081234567836</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>37</td><td>PG037</td><td>Miko Pratama</td><td>Laki-laki</td><td>081234567837</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>38</td><td>PG038</td><td>Naufal Hidayat</td><td>Laki-laki</td><td>081234567838</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>39</td><td>PG039</td><td>Oscar Kurniawan</td><td>Laki-laki</td><td>081234567839</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>40</td><td>PG040</td><td>Pandu Saputra</td><td>Laki-laki</td><td>081234567840</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>41</td><td>PG041</td><td>Qori Ahmad</td><td>Laki-laki</td><td>081234567841</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>42</td><td>PG042</td><td>Raka Prasetyo</td><td>Laki-laki</td><td>081234567842</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>43</td><td>PG043</td><td>Sandi Nugraha</td><td>Laki-laki</td><td>081234567843</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>44</td><td>PG044</td><td>Taufik Akbar</td><td>Laki-laki</td><td>081234567844</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>45</td><td>PG045</td><td>Udin Syahputra</td><td>Laki-laki</td><td>081234567845</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>46</td><td>PG046</td><td>Vicky Ramadhan</td><td>Laki-laki</td><td>081234567846</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>47</td><td>PG047</td><td>Wawan Hermawan</td><td>Laki-laki</td><td>081234567847</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>48</td><td>PG048</td><td>Yoga Permana</td><td>Laki-laki</td><td>081234567848</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>49</td><td>PG049</td><td>Zulfikar Hidayat</td><td>Laki-laki</td><td>081234567849</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>50</td><td>PG050</td><td>Aditya Firmansyah</td><td>Laki-laki</td><td>081234567850</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr><tr><td>51</td><td>PG051</td><td>Bagas Pratama</td><td>Laki-laki</td><td>081234567851</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>52</td><td>PG052</td><td>Ayu Lestari</td><td>Perempuan</td><td>081234567852</td><td>26 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>53</td><td>PG053</td><td>Dian Saputra</td><td>Laki-laki</td><td>081234567853</td><td>25 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>54</td><td>PG054</td><td>Fitri Wulandari</td><td>Perempuan</td><td>081234567854</td><td>24 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>55</td><td>PG055</td><td>Rian Firmansyah</td><td>Laki-laki</td><td>081234567855</td><td>23 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>56</td><td>PG056</td><td>Nabila Putri</td><td>Perempuan</td><td>081234567856</td><td>22 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>57</td><td>PG057</td><td>Yusuf Maulana</td><td>Laki-laki</td><td>081234567857</td><td>21 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>58</td><td>PG058</td><td>Salsa Maharani</td><td>Perempuan</td><td>081234567858</td><td>20 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>59</td><td>PG059</td><td>Arif Nugroho</td><td>Laki-laki</td><td>081234567859</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>60</td><td>PG060</td><td>Citra Ramadhani</td><td>Perempuan</td><td>081234567860</td><td>26 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr><tr><td>61</td><td>PG061</td><td>Doni Pratama</td><td>Laki-laki</td><td>081234567861</td><td>25 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>62</td><td>PG062</td><td>Indah Permata</td><td>Perempuan</td><td>081234567862</td><td>24 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>63</td><td>PG063</td><td>Fahri Akbar</td><td>Laki-laki</td><td>081234567863</td><td>23 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>64</td><td>PG064</td><td>Rina Oktavia</td><td>Perempuan</td><td>081234567864</td><td>22 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>65</td><td>PG065</td><td>Galih Saputra</td><td>Laki-laki</td><td>081234567865</td><td>21 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>66</td><td>PG066</td><td>Putri Maharani</td><td>Perempuan</td><td>081234567866</td><td>20 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>67</td><td>PG067</td><td>Ilham Hidayat</td><td>Laki-laki</td><td>081234567867</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>68</td><td>PG068</td><td>Sri Wahyuni</td><td>Perempuan</td><td>081234567868</td><td>26 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>69</td><td>PG069</td><td>Rizal Firmansyah</td><td>Laki-laki</td><td>081234567869</td><td>25 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>70</td><td>PG070</td><td>Melati Sari</td><td>Perempuan</td><td>081234567870</td><td>24 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
 
-<tr>
-<td>4</td><td>BK004</td><td>Artificial Intelligence</td><td>Kecerdasan Buatan</td><td>Rina Putri</td><td>2024</td><td><span class="badge bg-success">Tersedia</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
-</tr>
+<tr><td>71</td><td>PG071</td><td>Rendy Kurniawan</td><td>Laki-laki</td><td>081234567871</td><td>23 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>72</td><td>PG072</td><td>Nur Aini</td><td>Perempuan</td><td>081234567872</td><td>22 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>73</td><td>PG073</td><td>Agung Prasetyo</td><td>Laki-laki</td><td>081234567873</td><td>21 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>74</td><td>PG074</td><td>Vina Anggraini</td><td>Perempuan</td><td>081234567874</td><td>20 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>75</td><td>PG075</td><td>Yusuf Ramadhan</td><td>Laki-laki</td><td>081234567875</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>76</td><td>PG076</td><td>Dewi Kartika</td><td>Perempuan</td><td>081234567876</td><td>26 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>77</td><td>PG077</td><td>Bagus Maulana</td><td>Laki-laki</td><td>081234567877</td><td>25 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>78</td><td>PG078</td><td>Intan Safitri</td><td>Perempuan</td><td>081234567878</td><td>24 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>79</td><td>PG079</td><td>Rio Saputra</td><td>Laki-laki</td><td>081234567879</td><td>23 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>80</td><td>PG080</td><td>Yuliana Sari</td><td>Perempuan</td><td>081234567880</td><td>22 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
 
-<tr>
-<td>5</td><td>BK005</td><td>Data Science untuk Pemula</td><td>Data Science</td><td>Yoga Pratama</td><td>2023</td><td><span class="badge bg-danger">Dipinjam</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
-</tr>
+<tr><td>81</td><td>PG081</td><td>Andika Wijaya</td><td>Laki-laki</td><td>081234567881</td><td>21 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>82</td><td>PG082</td><td>Lisa Marlina</td><td>Perempuan</td><td>081234567882</td><td>20 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>83</td><td>PG083</td><td>Fajar Nugroho</td><td>Laki-laki</td><td>081234567883</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>84</td><td>PG084</td><td>Rahmawati</td><td>Perempuan</td><td>081234567884</td><td>26 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>85</td><td>PG085</td><td>Hendra Saputra</td><td>Laki-laki</td><td>081234567885</td><td>25 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>86</td><td>PG086</td><td>Anisa Putri</td><td>Perempuan</td><td>081234567886</td><td>24 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>87</td><td>PG087</td><td>Kevin Pratama</td><td>Laki-laki</td><td>081234567887</td><td>23 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>88</td><td>PG088</td><td>Tiara Puspita</td><td>Perempuan</td><td>081234567888</td><td>22 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>89</td><td>PG089</td><td>Yoga Firmansyah</td><td>Laki-laki</td><td>081234567889</td><td>21 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>90</td><td>PG090</td><td>Salsa Putri</td><td>Perempuan</td><td>081234567890</td><td>20 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
 
-<tr>
-<td>6</td><td>BK006</td><td>Jaringan Komputer</td><td>Jaringan Komputer</td><td>Rahmat Hidayat</td><td>2022</td><td><span class="badge bg-success">Tersedia</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
-</tr>
+<tr><td>91</td><td>PG091</td><td>Arga Pranata</td><td>Laki-laki</td><td>081234567891</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>92</td><td>PG092</td><td>Nadia Khairunnisa</td><td>Perempuan</td><td>081234567892</td><td>26 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>93</td><td>PG093</td><td>Dimas Ramadhan</td><td>Laki-laki</td><td>081234567893</td><td>25 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>94</td><td>PG094</td><td>Wulan Sari</td><td>Perempuan</td><td>081234567894</td><td>24 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>95</td><td>PG095</td><td>Reza Kurnia</td><td>Laki-laki</td><td>081234567895</td><td>23 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>96</td><td>PG096</td><td>Nurul Hidayah</td><td>Perempuan</td><td>081234567896</td><td>22 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>97</td><td>PG097</td><td>Fauzan Akmal</td><td>Laki-laki</td><td>081234567897</td><td>21 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>98</td><td>PG098</td><td>Rani Amelia</td><td>Perempuan</td><td>081234567898</td><td>20 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>99</td><td>PG099</td><td>Arif Setiawan</td><td>Laki-laki</td><td>081234567899</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>100</td><td>PG100</td><td>Siska Maharani</td><td>Perempuan</td><td>081234567900</td><td>26 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+                    <tr><td>101</td><td>PG101</td><td>Ahmad Fauzi</td><td>Laki-laki</td><td>081234567901</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>102</td><td>PG102</td><td>Siti Rahma</td><td>Perempuan</td><td>081234567902</td><td>26 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>103</td><td>PG103</td><td>Bima Prakoso</td><td>Laki-laki</td><td>081234567903</td><td>25 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>104</td><td>PG104</td><td>Dewi Anggraini</td><td>Perempuan</td><td>081234567904</td><td>24 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>105</td><td>PG105</td><td>Cahyo Nugroho</td><td>Laki-laki</td><td>081234567905</td><td>23 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>106</td><td>PG106</td><td>Nurul Fitri</td><td>Perempuan</td><td>081234567906</td><td>22 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>107</td><td>PG107</td><td>Rizky Hidayat</td><td>Laki-laki</td><td>081234567907</td><td>21 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>108</td><td>PG108</td><td>Putri Lestari</td><td>Perempuan</td><td>081234567908</td><td>20 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>109</td><td>PG109</td><td>Deni Saputra</td><td>Laki-laki</td><td>081234567909</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>110</td><td>PG110</td><td>Intan Maharani</td><td>Perempuan</td><td>081234567910</td><td>26 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>111</td><td>PG111</td><td>Fajar Akbar</td><td>Laki-laki</td><td>081234567911</td><td>25 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>112</td><td>PG112</td><td>Rina Melati</td><td>Perempuan</td><td>081234567912</td><td>24 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>113</td><td>PG113</td><td>Yoga Permana</td><td>Laki-laki</td><td>081234567913</td><td>23 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>114</td><td>PG114</td><td>Wulan Sari</td><td>Perempuan</td><td>081234567914</td><td>22 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>115</td><td>PG115</td><td>Ardiansyah</td><td>Laki-laki</td><td>081234567915</td><td>21 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>116</td><td>PG116</td><td>Anisa Putri</td><td>Perempuan</td><td>081234567916</td><td>20 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>117</td><td>PG117</td><td>Kevin Wijaya</td><td>Laki-laki</td><td>081234567917</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>118</td><td>PG118</td><td>Salsa Nabila</td><td>Perempuan</td><td>081234567918</td><td>26 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>119</td><td>PG119</td><td>Galang Pratama</td><td>Laki-laki</td><td>081234567919</td><td>25 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>120</td><td>PG120</td><td>Dinda Amelia</td><td>Perempuan</td><td>081234567920</td><td>24 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr><tr><td>121</td><td>PG121</td><td>Farhan Maulana</td><td>Laki-laki</td><td>081234567921</td><td>23 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>122</td><td>PG122</td><td>Riska Amelia</td><td>Perempuan</td><td>081234567922</td><td>22 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>123</td><td>PG123</td><td>Hafiz Akbar</td><td>Laki-laki</td><td>081234567923</td><td>21 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>124</td><td>PG124</td><td>Nisa Ramadhani</td><td>Perempuan</td><td>081234567924</td><td>20 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>125</td><td>PG125</td><td>Bagus Firmansyah</td><td>Laki-laki</td><td>081234567925</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>126</td><td>PG126</td><td>Putri Ayunda</td><td>Perempuan</td><td>081234567926</td><td>26 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>127</td><td>PG127</td><td>Arga Saputra</td><td>Laki-laki</td><td>081234567927</td><td>25 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>128</td><td>PG128</td><td>Yuni Kartika</td><td>Perempuan</td><td>081234567928</td><td>24 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>129</td><td>PG129</td><td>Daffa Nugraha</td><td>Laki-laki</td><td>081234567929</td><td>23 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>130</td><td>PG130</td><td>Winda Sari</td><td>Perempuan</td><td>081234567930</td><td>22 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
 
-<tr>
-<td>7</td><td>BK007</td><td>Cyber Security</td><td>Keamanan Siber</td><td>Ayu Lestari</td><td>2024</td><td><span class="badge bg-success">Tersedia</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
-</tr>
-
-<tr>
-<td>8</td><td>BK008</td><td>Cloud Computing</td><td>Teknologi Informasi</td><td>Fajar Nugroho</td><td>2023</td><td><span class="badge bg-danger">Dipinjam</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
-</tr>
-
-<tr>
-<td>9</td><td>BK009</td><td>Pengembangan Web Modern</td><td>Pengembangan Web</td><td>Nurul Hidayah</td><td>2024</td><td><span class="badge bg-success">Tersedia</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
-</tr>
-
-<tr>
-<td>10</td><td>BK010</td><td>Flutter Dasar</td><td>Pengembangan Mobile</td><td>Agus Setiawan</td><td>2024</td><td><span class="badge bg-success">Tersedia</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
-</tr>
-
-<tr>
-<td>11</td><td>BK011</td><td>Desain Grafis</td><td>Desain Grafis</td><td>Linda Wati</td><td>2022</td><td><span class="badge bg-success">Tersedia</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
-</tr>
-
-<tr>
-<td>12</td><td>BK012</td><td>Multimedia Interaktif</td><td>Multimedia</td><td>Putri Amelia</td><td>2023</td><td><span class="badge bg-danger">Dipinjam</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
-</tr>
-
-<tr>
-<td>13</td><td>BK013</td><td>Manajemen Modern</td><td>Manajemen</td><td>Siti Aisyah</td><td>2022</td><td><span class="badge bg-success">Tersedia</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
-</tr>
-
-<tr>
-<td>14</td><td>BK014</td><td>Bisnis Digital</td><td>Bisnis Digital</td><td>Farhan Akbar</td><td>2024</td><td><span class="badge bg-success">Tersedia</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
-</tr>
-
-<tr>
-<td>15</td><td>BK015</td><td>Akuntansi Dasar</td><td>Akuntansi</td><td>Citra Dewi</td><td>2023</td><td><span class="badge bg-danger">Dipinjam</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
-</tr>
-
-<tr>
-<td>16</td><td>BK016</td><td>Ekonomi Mikro</td><td>Ekonomi</td><td>Bagas Prasetyo</td><td>2022</td><td><span class="badge bg-success">Tersedia</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
-</tr>
-
-<tr>
-<td>17</td><td>BK017</td><td>Hukum Bisnis</td><td>Hukum</td><td>Rizki Maulana</td><td>2024</td><td><span class="badge bg-success">Tersedia</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
-</tr>
-
-<tr>
-<td>18</td><td>BK018</td><td>Metodologi Pembelajaran</td><td>Pendidikan</td><td>Nabila Putri</td><td>2023</td><td><span class="badge bg-success">Tersedia</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
-</tr>
-
-<tr>
-<td>19</td><td>BK019</td><td>Psikologi Umum</td><td>Psikologi</td><td>Dewi Anggraini</td><td>2022</td><td><span class="badge bg-danger">Dipinjam</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
-</tr>
-
-<tr>
-<td>20</td><td>BK020</td><td>Bahasa Inggris untuk IT</td><td>Bahasa</td><td>Andri Saputra</td><td>2024</td><td><span class="badge bg-success">Tersedia</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
-</tr>
-
-<tr>
-<td>21</td><td>BK021</td><td>Matematika Diskrit</td><td>Matematika</td><td>Yuni Kartika</td><td>2023</td><td><span class="badge bg-success">Tersedia</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
-</tr>
-
-<tr>
-<td>22</td><td>BK022</td><td>Statistik Dasar</td><td>Statistik</td><td>Ahmad Fauzi</td><td>2022</td><td><span class="badge bg-success">Tersedia</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
-</tr>
-
-<tr>
-<td>23</td><td>BK023</td><td>Sistem Operasi Modern</td><td>Sistem Operasi</td><td>Maya Sari</td><td>2024</td><td><span class="badge bg-danger">Dipinjam</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
-</tr>
-
-<tr>
-<td>24</td><td>BK024</td><td>Rekayasa Perangkat Lunak</td><td>Rekayasa Perangkat Lunak</td><td>Rudi Hartono</td><td>2023</td><td><span class="badge bg-success">Tersedia</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
-</tr>
-
-<tr>
-<td>25</td><td>BK025</td><td>Ensiklopedia Teknologi</td><td>Referensi</td><td>Tim Editor</td><td>2024</td><td><span class="badge bg-success">Tersedia</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
-</tr>
+<tr><td>131</td><td>PG131</td><td>Ilham Pratama</td><td>Laki-laki</td><td>081234567931</td><td>21 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>132</td><td>PG132</td><td>Melisa Putri</td><td>Perempuan</td><td>081234567932</td><td>20 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>133</td><td>PG133</td><td>Reza Maulana</td><td>Laki-laki</td><td>081234567933</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>134</td><td>PG134</td><td>Aulia Rahman</td><td>Perempuan</td><td>081234567934</td><td>26 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>135</td><td>PG135</td><td>Fikri Hidayat</td><td>Laki-laki</td><td>081234567935</td><td>25 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>136</td><td>PG136</td><td>Tiara Nabila</td><td>Perempuan</td><td>081234567936</td><td>24 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>137</td><td>PG137</td><td>Yoga Kurniawan</td><td>Laki-laki</td><td>081234567937</td><td>23 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>138</td><td>PG138</td><td>Shinta Lestari</td><td>Perempuan</td><td>081234567938</td><td>22 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>139</td><td>PG139</td><td>Rafi Akmal</td><td>Laki-laki</td><td>081234567939</td><td>21 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>140</td><td>PG140</td><td>Nadia Putri</td><td>Perempuan</td><td>081234567940</td><td>20 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>141</td><td>PG141</td><td>Bayu Prasetyo</td><td>Laki-laki</td><td>081234567941</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>142</td><td>PG142</td><td>Dewi Safitri</td><td>Perempuan</td><td>081234567942</td><td>26 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>143</td><td>PG143</td><td>Rendi Saputra</td><td>Laki-laki</td><td>081234567943</td><td>25 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>144</td><td>PG144</td><td>Feby Anggraini</td><td>Perempuan</td><td>081234567944</td><td>24 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>145</td><td>PG145</td><td>Galang Firmansyah</td><td>Laki-laki</td><td>081234567945</td><td>23 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr><tr><td>146</td><td>PG146</td><td>Cindy Maharani</td><td>Perempuan</td><td>081234567946</td><td>22 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>147</td><td>PG147</td><td>Ilham Nugroho</td><td>Laki-laki</td><td>081234567947</td><td>21 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>148</td><td>PG148</td><td>Putri Ramadhani</td><td>Perempuan</td><td>081234567948</td><td>20 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>149</td><td>PG149</td><td>Rizky Akbar</td><td>Laki-laki</td><td>081234567949</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>150</td><td>PG150</td><td>Fina Lestari</td><td>Perempuan</td><td>081234567950</td><td>26 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>151</td><td>PG151</td><td>Andika Saputra</td><td>Laki-laki</td><td>081234567951</td><td>25 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>152</td><td>PG152</td><td>Nurul Aulia</td><td>Perempuan</td><td>081234567952</td><td>24 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>153</td><td>PG153</td><td>Bagus Prasetyo</td><td>Laki-laki</td><td>081234567953</td><td>23 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>154</td><td>PG154</td><td>Rina Oktaviani</td><td>Perempuan</td><td>081234567954</td><td>22 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>155</td><td>PG155</td><td>Doni Firmansyah</td><td>Laki-laki</td><td>081234567955</td><td>21 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>156</td><td>PG156</td><td>Shinta Ayu</td><td>Perempuan</td><td>081234567956</td><td>20 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>157</td><td>PG157</td><td>Kevin Hidayat</td><td>Laki-laki</td><td>081234567957</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>158</td><td>PG158</td><td>Melati Salsabila</td><td>Perempuan</td><td>081234567958</td><td>26 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>159</td><td>PG159</td><td>Yoga Pratama</td><td>Laki-laki</td><td>081234567959</td><td>25 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>160</td><td>PG160</td><td>Intan Permata</td><td>Perempuan</td><td>081234567960</td><td>24 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>161</td><td>PG161</td><td>Arif Maulana</td><td>Laki-laki</td><td>081234567961</td><td>23 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>162</td><td>PG162</td><td>Dewi Kartika</td><td>Perempuan</td><td>081234567962</td><td>22 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>163</td><td>PG163</td><td>Fauzan Akmal</td><td>Laki-laki</td><td>081234567963</td><td>21 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>164</td><td>PG164</td><td>Nadia Khairunnisa</td><td>Perempuan</td><td>081234567964</td><td>20 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>165</td><td>PG165</td><td>Rendy Wijaya</td><td>Laki-laki</td><td>081234567965</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>166</td><td>PG166</td><td>Ayu Puspitasari</td><td>Perempuan</td><td>081234567966</td><td>26 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>167</td><td>PG167</td><td>Galih Kurniawan</td><td>Laki-laki</td><td>081234567967</td><td>25 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>168</td><td>PG168</td><td>Rani Amelia</td><td>Perempuan</td><td>081234567968</td><td>24 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>169</td><td>PG169</td><td>Fikri Ramadhan</td><td>Laki-laki</td><td>081234567969</td><td>23 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>170</td><td>PG170</td><td>Salsa Maharani</td><td>Perempuan</td><td>081234567970</td><td>22 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr><tr><td>171</td><td>PG171</td><td>Andri Setiawan</td><td>Laki-laki</td><td>081234567971</td><td>21 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>172</td><td>PG172</td><td>Nuraini Putri</td><td>Perempuan</td><td>081234567972</td><td>20 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>173</td><td>PG173</td><td>Bayu Pratama</td><td>Laki-laki</td><td>081234567973</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>174</td><td>PG174</td><td>Vina Lestari</td><td>Perempuan</td><td>081234567974</td><td>26 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>175</td><td>PG175</td><td>Dimas Saputra</td><td>Laki-laki</td><td>081234567975</td><td>25 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>176</td><td>PG176</td><td>Rina Maharani</td><td>Perempuan</td><td>081234567976</td><td>24 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>177</td><td>PG177</td><td>Fikri Nugroho</td><td>Laki-laki</td><td>081234567977</td><td>23 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>178</td><td>PG178</td><td>Aisyah Ramadhani</td><td>Perempuan</td><td>081234567978</td><td>22 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>179</td><td>PG179</td><td>Galang Firmansyah</td><td>Laki-laki</td><td>081234567979</td><td>21 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>180</td><td>PG180</td><td>Shinta Amelia</td><td>Perempuan</td><td>081234567980</td><td>20 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>181</td><td>PG181</td><td>Rafi Hidayat</td><td>Laki-laki</td><td>081234567981</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>182</td><td>PG182</td><td>Putri Safitri</td><td>Perempuan</td><td>081234567982</td><td>26 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>183</td><td>PG183</td><td>Yoga Prakoso</td><td>Laki-laki</td><td>081234567983</td><td>25 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>184</td><td>PG184</td><td>Indah Puspita</td><td>Perempuan</td><td>081234567984</td><td>24 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>185</td><td>PG185</td><td>Arga Maulana</td><td>Laki-laki</td><td>081234567985</td><td>23 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>186</td><td>PG186</td><td>Riska Anggraini</td><td>Perempuan</td><td>081234567986</td><td>22 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>187</td><td>PG187</td><td>Bagas Kurniawan</td><td>Laki-laki</td><td>081234567987</td><td>21 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>188</td><td>PG188</td><td>Dewi Kartika</td><td>Perempuan</td><td>081234567988</td><td>20 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>189</td><td>PG189</td><td>Rendy Akbar</td><td>Laki-laki</td><td>081234567989</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>190</td><td>PG190</td><td>Melati Sari</td><td>Perempuan</td><td>081234567990</td><td>26 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>191</td><td>PG191</td><td>Farhan Saputra</td><td>Laki-laki</td><td>081234567991</td><td>25 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>192</td><td>PG192</td><td>Nabila Azzahra</td><td>Perempuan</td><td>081234567992</td><td>24 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>193</td><td>PG193</td><td>Reza Firmansyah</td><td>Laki-laki</td><td>081234567993</td><td>23 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>194</td><td>PG194</td><td>Tiara Anindya</td><td>Perempuan</td><td>081234567994</td><td>22 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>195</td><td>PG195</td><td>Alvin Pratama</td><td>Laki-laki</td><td>081234567995</td><td>21 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr><tr><td>196</td><td>PG196</td><td>Novi Yuliana</td><td>Perempuan</td><td>081234567996</td><td>20 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>197</td><td>PG197</td><td>Dian Pratama</td><td>Laki-laki</td><td>081234567997</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>198</td><td>PG198</td><td>Ayu Kartika</td><td>Perempuan</td><td>081234567998</td><td>26 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>199</td><td>PG199</td><td>Fauzi Akbar</td><td>Laki-laki</td><td>081234567999</td><td>25 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>200</td><td>PG200</td><td>Salsa Rahma</td><td>Perempuan</td><td>081234568000</td><td>24 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>201</td><td>PG201</td><td>Rizal Maulana</td><td>Laki-laki</td><td>081234568001</td><td>23 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>202</td><td>PG202</td><td>Putri Amelia</td><td>Perempuan</td><td>081234568002</td><td>22 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>203</td><td>PG203</td><td>Bagus Saputra</td><td>Laki-laki</td><td>081234568003</td><td>21 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>204</td><td>PG204</td><td>Dewi Lestari</td><td>Perempuan</td><td>081234568004</td><td>20 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>205</td><td>PG205</td><td>Yoga Nugroho</td><td>Laki-laki</td><td>081234568005</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>206</td><td>PG206</td><td>Rina Safitri</td><td>Perempuan</td><td>081234568006</td><td>26 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>207</td><td>PG207</td><td>Arif Firmansyah</td><td>Laki-laki</td><td>081234568007</td><td>25 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>208</td><td>PG208</td><td>Intan Maharani</td><td>Perempuan</td><td>081234568008</td><td>24 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>209</td><td>PG209</td><td>Kevin Prakoso</td><td>Laki-laki</td><td>081234568009</td><td>23 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>210</td><td>PG210</td><td>Nadia Aulia</td><td>Perempuan</td><td>081234568010</td><td>22 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>211</td><td>PG211</td><td>Rian Saputra</td><td>Perempuan</td><td>081234568011</td><td>21 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>212</td><td>PG212</td><td>Siti Nurhaliza</td><td>Perempuan</td><td>081234568012</td><td>20 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>213</td><td>PG213</td><td>Anisa Fitri</td><td>Perempuan</td><td>081234568013</td><td>27 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>214</td><td>PG214</td><td>Putri Ramadhani</td><td>Perempuan</td><td>081234568014</td><td>26 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>215</td><td>PG215</td><td>Wulan Sari</td><td>Perempuan</td><td>081234568015</td><td>25 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>216</td><td>PG216</td><td>Tiara Puspita</td><td>Perempuan</td><td>081234568016</td><td>24 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>217</td><td>PG217</td><td>Melati Ayu</td><td>Perempuan</td><td>081234568017</td><td>23 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>218</td><td>PG218</td><td>Nur Aisyah</td><td>Perempuan</td><td>081234568018</td><td>22 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>219</td><td>PG219</td><td>Riska Amelia</td><td>Perempuan</td><td>081234568019</td><td>21 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
+<tr><td>220</td><td>PG220</td><td>Feby Kartika</td><td>Perempuan</td><td>081234568020</td><td>20 Juli 2026</td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td></tr>
                 </tbody>
 
             </table>
