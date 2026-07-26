@@ -187,3 +187,16 @@ document.querySelectorAll("#tabelpengunjung .btn-danger").forEach(btn => {
     });
 
 });
+document.querySelectorAll("#tabelpengunjung .btn-warning").forEach(btn => {
+
+    btn.addEventListener("click", function () {
+
+        Swal.fire({
+            title: "Edit Pengunjung",
+            text: "Fitur edit hanya simulasi.",
+            icon: "info"
+        });
+
+    });
+
+});
