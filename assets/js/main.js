@@ -108,24 +108,28 @@ document.querySelectorAll(".btn-warning").forEach(function (btn) {
 // SEARCH DATA BUKU
 // ===============================
 
-const searchBuku = document.getElementById("searchBuku");
+const inputSearch = document.getElementById("searchBuku");
 
-if (searchBuku) {
+if (inputSearch) {
 
-    searchBuku.addEventListener("keyup", function () {
+    inputSearch.addEventListener("input", function () {
 
-        let keyword = this.value.toLowerCase();
+        const keyword = inputSearch.value.toLowerCase();
 
-        let rows = document.querySelectorAll("#tabelBuku tr");
+        const rows = document.querySelectorAll("#tabelBuku tr");
 
-        rows.forEach(function(row){
+        rows.forEach((row) => {
 
-            let text = row.innerText.toLowerCase();
+            const isi = row.textContent.toLowerCase();
 
-            if(text.includes(keyword)){
+            if (isi.indexOf(keyword) > -1) {
+
                 row.style.display = "";
-            }else{
+
+            } else {
+
                 row.style.display = "none";
+
             }
 
         });
