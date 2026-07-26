@@ -172,12 +172,27 @@ body{
 
 .card{
     border:none;
-    border-radius:15px;
+    border-radius:18px;
+    min-height:150px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
 }
 
 .card h2{
-    color:#5D4037;
+    font-size:38px;
     font-weight:bold;
+    color:#5D4037;
+    margin:0;
+    white-space:nowrap;
+}
+
+.card h6{
+    font-size:16px;
+    margin-bottom:10px;
+    color:#6c757d;
 }
 .table th{
 
