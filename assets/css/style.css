@@ -160,3 +160,22 @@ body{
     background:#6D4C41;
 
 }
+/* NAVBAR */
+
+.navbar{
+    background:#ffffff;
+}
+
+.navbar h4{
+    font-weight:bold;
+}
+
+.card{
+    border:none;
+    border-radius:15px;
+}
+
+.card h2{
+    color:#5D4037;
+    font-weight:bold;
+}
