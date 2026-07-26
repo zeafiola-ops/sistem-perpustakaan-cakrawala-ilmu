@@ -179,3 +179,16 @@ body{
     color:#5D4037;
     font-weight:bold;
 }
+.table th{
+
+    background:#5D4037;
+
+    color:white;
+
+}
+
+.table{
+
+    margin-bottom:0;
+
+}
