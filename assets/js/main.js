@@ -48,8 +48,59 @@ function updateJam() {
         jam.innerHTML = sekarang.toLocaleTimeString("id-ID");
 
     }
-
 }
 
 setInterval(updateJam, 1000);
 updateJam();
+// =====================
+// HAPUS DATA BUKU
+// =====================
+
+document.querySelectorAll(".btn-danger").forEach(function (btn) {
+
+    btn.addEventListener("click", function () {
+
+        Swal.fire({
+            title: "Hapus Buku?",
+            text: "Data buku akan dihapus.",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Ya",
+            cancelButtonText: "Batal"
+        }).then((result) => {
+
+            if (result.isConfirmed) {
+
+                btn.closest("tr").remove();
+
+                Swal.fire(
+                    "Berhasil!",
+                    "Data berhasil dihapus.",
+                    "success"
+                );
+
+            }
+
+        });
+
+    });
+
+});
+// =====================
+// EDIT DATA BUKU
+// =====================
+
+document.querySelectorAll(".btn-warning").forEach(function (btn) {
+
+    btn.addEventListener("click", function () {
+
+        Swal.fire({
+            title: "Edit Buku",
+            text: "Fitur edit sedang dalam tahap pengembangan.",
+            icon: "info",
+            confirmButtonText: "OK"
+        });
+
+    });
+
+});
