@@ -33,3 +33,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+// =====================
+// JAM DIGITAL
+// =====================
+
+function updateJam() {
+
+    const jam = document.getElementById("jam");
+
+    if (jam) {
+
+        const sekarang = new Date();
+
+        jam.innerHTML = sekarang.toLocaleTimeString("id-ID");
+
+    }
+
+}
+
+setInterval(updateJam, 1000);
+updateJam();
