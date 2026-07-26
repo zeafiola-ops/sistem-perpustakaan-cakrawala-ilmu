@@ -174,9 +174,11 @@ data-bs-target="#modalTambahBuku">
         <div class="row mb-3">
 
             <div class="col-md-6">
-                <input type="text"
-                    class="form-control"
-                    placeholder="🔍 Cari Judul Buku...">
+                <input
+type="text"
+class="form-control"
+id="searchBuku"
+placeholder="🔍 Cari Judul Buku...">
             </div>
 
         </div>
@@ -200,7 +202,7 @@ data-bs-target="#modalTambahBuku">
 
                 </thead>
 
-                <tbody>
+                <tbody id="tabelBuku">
                     <tr>
 <td>1</td><td>BK001</td><td>Pemrograman Python Dasar</td><td>Pemrograman</td><td>Andi Wijaya</td><td>2024</td><td><span class="badge bg-success">Tersedia</span></td><td><button class="btn btn-warning btn-sm"><i class="fa-solid fa-pen"></i></button> <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button></td>
 </tr>
@@ -311,52 +313,60 @@ data-bs-target="#modalTambahBuku">
 </div>
 ... kode halaman ...
 
-<!-- Modal Tambah Buku -->
-<div class="modal fade" id="modalTambahBuku" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <div class="modal-header">
-        <h5 class="modal-title">Tambah Buku</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
       <div class="modal-body">
 
         <div class="mb-3">
           <label>Kode Buku</label>
-          <input type="text" class="form-control">
+          <input
+type="text"
+class="form-control"
+id="kodeBuku">
         </div>
 
         <div class="mb-3">
           <label>Judul Buku</label>
-          <input type="text" class="form-control">
+          <input
+type="text"
+class="form-control"
+id="judulBuku">
         </div>
 
         <div class="mb-3">
           <label>Penulis</label>
-          <input type="text" class="form-control">
+         <input
+type="text"
+class="form-control"
+id="penulisBukuu">
         </div>
 
         <div class="mb-3">
           <label>Tahun</label>
-          <input type="number" class="form-control">
+          <input
+type="text"
+class="form-control"
+id="tahunBuku">
         </div>
 
       </div>
 
       <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button
+id="btnSimpanBuku"
+class="btn btn-primary">
+
+Simpan
+
+</button>
         <button class="btn btn-primary">Simpan</button>
       </div>
 
     </div>
   </div>
 </div>
-    <!-- Modal Tambah Buku -->
-<div class="modal fade" id="modalTambahBuku">
-    ...
-</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="assets/js/main.js"></script>
 
 </body>
 </html>
