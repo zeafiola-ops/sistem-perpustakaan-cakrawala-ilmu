@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }).then(() => {
 
                 // Nanti diarahkan ke Dashboard
-                // window.location.href = "dashboard.html";
+                window.location.href = "dashboard.html";
 
             });
 
