@@ -104,3 +104,32 @@ document.querySelectorAll(".btn-warning").forEach(function (btn) {
     });
 
 });
+// ===============================
+// SEARCH DATA BUKU
+// ===============================
+
+const searchBuku = document.getElementById("searchBuku");
+
+if (searchBuku) {
+
+    searchBuku.addEventListener("keyup", function () {
+
+        let keyword = this.value.toLowerCase();
+
+        let rows = document.querySelectorAll("#tabelBuku tr");
+
+        rows.forEach(function(row){
+
+            let text = row.innerText.toLowerCase();
+
+            if(text.includes(keyword)){
+                row.style.display = "";
+            }else{
+                row.style.display = "none";
+            }
+
+        });
+
+    });
+
+}
