@@ -106,6 +106,49 @@
     Admin dapat menambah, mengubah, menghapus, dan mencari data buku.
 </p>
 <hr>
+    <div class="row mb-4">
+
+    <div class="col-md-3">
+        <div class="card shadow border-0 text-center">
+            <div class="card-body">
+                <i class="fa-solid fa-book fa-2x text-primary mb-2"></i>
+                <h6>Total Buku</h6>
+                <h3>500</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow border-0 text-center">
+            <div class="card-body">
+                <i class="fa-solid fa-layer-group fa-2x text-success mb-2"></i>
+                <h6>Total Kategori</h6>
+                <h3>25</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow border-0 text-center">
+            <div class="card-body">
+                <i class="fa-solid fa-book-open-reader fa-2x text-warning mb-2"></i>
+                <h6>Buku Dipinjam</h6>
+                <h3>98</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow border-0 text-center">
+            <div class="card-body">
+                <i class="fa-solid fa-circle-check fa-2x text-info mb-2"></i>
+                <h6>Buku Tersedia</h6>
+                <h3>402</h3>
+            </div>
+        </div>
+    </div>
+
+</div>
 <div class="card shadow">
 
     <div class="card-header bg-white d-flex justify-content-between align-items-center">
@@ -115,7 +158,10 @@
             Data Buku
         </h5>
 
-        <button class="btn btn-primary">
+        <button
+class="btn btn-primary"
+data-bs-toggle="modal"
+data-bs-target="#modalTambahBuku">
             <i class="fa-solid fa-plus"></i>
             Tambah Buku
         </button>
@@ -263,3 +309,54 @@
     </div>
 
 </div>
+... kode halaman ...
+
+<!-- Modal Tambah Buku -->
+<div class="modal fade" id="modalTambahBuku" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Tambah Buku</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="mb-3">
+          <label>Kode Buku</label>
+          <input type="text" class="form-control">
+        </div>
+
+        <div class="mb-3">
+          <label>Judul Buku</label>
+          <input type="text" class="form-control">
+        </div>
+
+        <div class="mb-3">
+          <label>Penulis</label>
+          <input type="text" class="form-control">
+        </div>
+
+        <div class="mb-3">
+          <label>Tahun</label>
+          <input type="number" class="form-control">
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+        <button class="btn btn-primary">Simpan</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+    <!-- Modal Tambah Buku -->
+<div class="modal fade" id="modalTambahBuku">
+    ...
+</div>
+
+</body>
+</html>
